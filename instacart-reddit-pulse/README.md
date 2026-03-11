@@ -2,11 +2,23 @@
 
 Instacart Reddit Pulse is a small Voice-of-Customer workflow that samples recent Reddit conversations about Instacart and converts them into lightweight sentiment + theme signals for product decisions.
 
+## Fastest path (default): run with bundled synthetic sample data
 ## How to run
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+2. (Optional) Create `.env` from template:
+   ```bash
+   cp .env.example .env
+   ```
+3. Run `analysis.ipynb` end-to-end.
+
+By default, the notebook uses bundled synthetic data from `data/sample_input.csv` so you can generate a draft immediately without API approval.
+
+## Optional: run with Reddit API data later
+When your Reddit app is approved, switch to live mode:
+1. Add credentials in `.env`:
 2. Create your local `.env` file from the template:
    ```bash
    cp .env.example .env
@@ -18,6 +30,9 @@ Instacart Reddit Pulse is a small Voice-of-Customer workflow that samples recent
    REDDIT_CLIENT_ID=...
    REDDIT_CLIENT_SECRET=...
    REDDIT_USER_AGENT=instacart-reddit-pulse/0.1 by your-team
+   USE_SAMPLE_DATA=0
+   ```
+2. Re-run `analysis.ipynb`.
    ```
 4. Run `analysis.ipynb` end-to-end.
 
