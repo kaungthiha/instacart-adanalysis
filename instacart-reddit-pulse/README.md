@@ -7,12 +7,29 @@ Instacart Reddit Pulse is a small Voice-of-Customer workflow that samples recent
    ```bash
    pip install -r requirements.txt
    ```
+2. Create your local `.env` file from the template:
+   ```bash
+   cp .env.example .env
+   ```
+   Then open `.env` and replace placeholder values.
+3. Add Reddit API credentials in `.env`:
 2. Add Reddit API credentials in `.env`:
    ```bash
    REDDIT_CLIENT_ID=...
    REDDIT_CLIENT_SECRET=...
    REDDIT_USER_AGENT=instacart-reddit-pulse/0.1 by your-team
    ```
+4. Run `analysis.ipynb` end-to-end.
+
+### Where to get Reddit API credentials
+1. Go to `https://www.reddit.com/prefs/apps` while logged into Reddit.
+2. Click **create app** (or **create another app**).
+3. Choose **script** as the app type.
+4. Set any name and redirect URI (for scripts, `http://localhost:8080` is fine).
+5. Copy:
+   - `client id` (shown under the app name)
+   - `secret`
+6. Put them in `.env`.
 3. Run `analysis.ipynb` end-to-end.
 
 ## Outputs
