@@ -9,3 +9,4 @@ data/raw/
 outputs/*.png
 outputs/raw_text*
 !data/sample_input.csv
+analysis.executed.ipynb

@@ -12,6 +12,12 @@ Instacart Reddit Pulse is a small Voice-of-Customer workflow that samples recent
    ```bash
    cp .env.example .env
    ```
+3. Run the one-command sample launcher (recommended for a quick draft):
+   ```bash
+   bash scripts/run_sample.sh
+   ```
+   This executes the notebook and writes output artifacts.
+4. Or run `analysis.ipynb` manually end-to-end.
 3. Run `analysis.ipynb` end-to-end.
 
 By default, the notebook uses bundled synthetic data from `data/sample_input.csv` so you can generate a draft immediately without API approval.
