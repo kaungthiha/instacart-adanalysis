@@ -16,6 +16,19 @@ Instacart Reddit Pulse is a small Voice-of-Customer workflow that samples recent
    ```bash
    bash scripts/run_sample.sh
    ```
+   This runs a direct sample pipeline first (`scripts/run_sample.py`) and writes output artifacts.
+4. Or run `analysis.ipynb` manually end-to-end.
+
+By default, the notebook uses bundled synthetic data from `data/sample_input.csv` so you can generate a draft immediately without API approval.
+
+If you get a missing package error, install dependencies first:
+```bash
+pip install -r requirements.txt
+```
+
+## Optional: run with Reddit API data later
+When your Reddit app is approved, switch to live mode:
+1. Add credentials in `.env`:
    This executes the notebook and writes output artifacts.
 4. Or run `analysis.ipynb` manually end-to-end.
 3. Run `analysis.ipynb` end-to-end.

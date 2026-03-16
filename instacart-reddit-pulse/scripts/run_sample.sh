@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Run sample mode quickly. Prefer direct Python pipeline; fallback to notebook execution.
 # Run the notebook in default sample mode and generate outputs for a quick draft.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
